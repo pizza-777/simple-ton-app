@@ -1,0 +1,20 @@
+{
+    "singleQuote": true,
+    "tabWidth": 2,
+    "semi": false,
+    "trailingComma": "es5",
+    "printWidth": 200,
+    "overrides": [
+      {
+        "files": "*.sol",
+        "options": {
+          "parser": "solidity-parse",
+          "printWidth": 80,
+          "tabWidth": 4,
+          "useTabs": false,
+          "singleQuote": false,
+          "bracketSpacing": false
+        }
+      }
+    ]
+  }
