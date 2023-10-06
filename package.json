@@ -2,12 +2,12 @@
   "name": "Simple-ton-app",
   "version": "0.1.0",
   "private": false,
-  "scripts": {    
+  "scripts": {
     "s": "vue-cli-service serve",
     "dev": "vue-cli-service build -mode development",
     "prod": "vue-cli-service build -mode production",
     "lint": "vue-cli-service lint",
-    "publish": "prod && gh-pages -d"
+    "publish": "npm run prod && gh-pages -d dist"
   },
   "dependencies": {
     "bootstrap": "^5.2.0",
@@ -19,6 +19,7 @@
     "vue-router": "^3.5.1"
   },
   "devDependencies": {
+    "@twa-dev/types": "^6.9.0",
     "@types/webpack-env": "^1.18.2",
     "@typescript-eslint/eslint-plugin": "^5.4.0",
     "@typescript-eslint/parser": "^5.4.0",
