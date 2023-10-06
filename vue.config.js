@@ -1,7 +1,13 @@
 const { defineConfig } = require('@vue/cli-service')
-const CopyPlugin = require('copy-webpack-plugin');
+//const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = defineConfig({
+  devServer: { //config for ngrok
+    allowedHosts: 'all',//
+    port: 8080,
+    host: "localhost"
+
+  },
   pages: {
     index: {
       entry: 'src/main.ts',
@@ -9,7 +15,7 @@ module.exports = defineConfig({
     }
   },
   transpileDependencies: true,
-  publicPath: process.env.NODE_ENV === 'production' ? '/' : '/',
+  publicPath: process.env.NODE_ENV === 'production' ? '/simple-ton-app/' : '/',
   configureWebpack: {
     plugins: [
       // new CopyPlugin(
